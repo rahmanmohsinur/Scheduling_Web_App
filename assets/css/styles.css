@@ -1,0 +1,302 @@
+/* Reset some default styles for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for body and overall layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container for layout and content alignment */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/*
+** Nav Bar
+*/
+/* Basic styling for the toggler button */
+.navbar-toggler {
+    display: none; /* Hide toggler button by default, will be shown in mobile view */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Styling for the toggler icon lines */
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 24px; /* Width of the icon */
+    height: 2px; /* Height of the lines */
+    background-color: #fff; /* Color of the lines */
+    position: relative; /* Positioning context for pseudo-elements */
+}
+
+/* Creating the three lines for the hamburger icon */
+.navbar-toggler-icon::before, 
+.navbar-toggler-icon::after {
+    content: "";
+    display: block;
+    width: 24px; /* Width of the icon lines */
+    height: 2px; /* Height of the lines */
+    background-color: #fff; /* Color of the lines */
+    position: absolute; /* Positioned relative to the parent .navbar-toggler-icon */
+    left: 0;
+}
+
+/* Positioning the before and after pseudo-elements */
+.navbar-toggler-icon::before {
+    top: -7px; /* Move the line up */
+}
+
+.navbar-toggler-icon::after {
+    top: 7px; /* Move the line down */
+}
+
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+@media (min-width: 767.99px) {
+    .navbar-nav {
+        float: right;
+    }
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .navbar-toggler {
+        float: right;
+        display: block;
+        width: auto;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Main Content Styling */
+main {
+    padding: 2rem 0;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+/* Forms */
+form {
+    margin: 1rem 0;
+}
+
+input, textarea, button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design Breakpoints */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    position: relative;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-section {
+    flex-basis: 23%;
+    margin: 1rem 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #ffdd57;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #444;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .footer-section {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .footer-container {
+        padding: 0;
+    }
+}
