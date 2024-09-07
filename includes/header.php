@@ -1,7 +1,7 @@
 <?php
 // The header file
 // Include the configuration file
-require_once 'config/config.php';
+// require_once 'config/config.php';
 
 // Ensure these variables are set by the template
 $page_title = isset($page_title) ? htmlspecialchars($page_title) . ' | ' . SITE_NAME : 'Default Title | ' . SITE_NAME;
