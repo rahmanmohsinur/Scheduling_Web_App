@@ -8,7 +8,7 @@ The project is designed to be responsive and works seamlessly across various mod
 bash
 
 ```
-git clone https://github.com/your-username/task-management-web-app.git
+git clone https://github.com/rahmanmohsinur/Scheduling_Web_App.git
 cd task-management-web-app
 ```
 
